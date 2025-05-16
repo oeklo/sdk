@@ -92,8 +92,6 @@ jobs:
         key: http_cache-${{ runner.os }}-${{ matrix.python-version }}
 
     - name: Run Nox
-      env:
-        UV_PRERELEASE: allow
       run: |
         nox --verbose
 
@@ -136,8 +134,6 @@ jobs:
         nox --version
 
     - name: Run Nox
-      env:
-        UV_PRERELEASE: allow
       run: |
         nox -- -m "external"
 
